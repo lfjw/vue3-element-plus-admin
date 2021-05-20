@@ -3,6 +3,8 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 
-console.log(2)
+import 'normalize.css/normalize.css'
 
-createApp(App).use(store).use(router).mount('#app')
+import installElementPlus from './plugins/element'
+
+createApp(App).use(store).use(installElementPlus).use(router).mount('#app')
